@@ -161,7 +161,14 @@ watch(currentSlide, (val) => {
 
       <!-- HERO CONTENT -->
       <div v-if="activeMovie" class="relative z-10 flex flex-col justify-end h-full pb-24 md:pb-32 px-4 md:px-16 max-w-3xl pointer-events-none">
-        <div class="space-y-6 pointer-events-auto" :key="currentSlide"> 
+        <div 
+          class="space-y-6 pointer-events-auto" 
+          :key="currentSlide"
+          v-motion
+          :initial="{ opacity: 0, x: -30 }"
+          :enter="{ opacity: 1, x: 0 }"
+          :transition="{ duration: 700 }"
+        > 
            <div class="flex items-center gap-2 mb-2">
               <Badge variant="outline" class="border-red-600 text-red-500 tracking-widest font-bold bg-red-600/10 backdrop-blur-sm">
                 N ORIGINAL

@@ -45,5 +45,14 @@
     "notifications": "Notifications",
     "newsletter": "Newsletter",
     "volume": "Volume"
+  },
+  "accessibility": {
+    "title": "Accessibility & Appearance",
+    "description": "Customize your experience.",
+    "typography": "Typography",
+    "fontSize": "Size",
+    "appearance": "Appearance",
+    "colorBlindness": "Color Blindness",
+    "reset": "Reset"
   }
 }

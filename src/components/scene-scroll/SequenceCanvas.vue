@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, watch, defineExpose } from 'vue'
+import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { cn } from "@/lib/utils"
 
 interface Props {
@@ -31,7 +31,7 @@ onMounted(() => {
       loadedCount++
       emit('load-progress', Math.round((loadedCount / props.frameCount) * 100))
       if (loadedCount === props.frameCount) {
-        imagesRef.current = imgs
+        imagesRef.value = imgs
         isLoaded.value = true
         emit('loaded')
         draw()
@@ -41,7 +41,7 @@ onMounted(() => {
       // Handle error (e.g., skip or show placeholder)
       loadedCount++
       if (loadedCount === props.frameCount) {
-        imagesRef.current = imgs
+        imagesRef.value = imgs
         isLoaded.value = true
         emit('loaded')
       }

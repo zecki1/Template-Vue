@@ -30,13 +30,9 @@ onMounted(() => {
       current: 1285, 
       ease: "none", 
       onUpdate: () => {
-        currentFrame.value = frameProxy.value.current
+        currentFrame.value = Math.floor(frameProxy.value.current)
       }
     }, 0)
-
-    // Additional effects from the original template
-    tl.fromTo("#disney-mask-logo", { scale: 20 }, { scale: 1, ease: "power2.inOut" }, 0)
-    tl.to("#disney-mask-overlay", { opacity: 0, duration: 0.2 }, ">-0.2")
   }, containerRef.value!)
 })
 

@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
-import { Terminal, Menu, Settings } from 'lucide-vue-next'
+import { Terminal, Menu } from 'lucide-vue-next'
 import { useI18n } from 'vue-i18n'
 import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+import AccessibilitySettings from '@/components/layout/AccessibilitySettings.vue'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
@@ -58,9 +59,7 @@ const isOpen = ref(false)
       <div class="flex items-center gap-2">
         <div class="hidden sm:flex items-center gap-2">
           <LanguageSwitcher />
-          <Button variant="ghost" size="icon">
-            <Settings class="h-5 w-5" />
-          </Button>
+          <AccessibilitySettings />
         </div>
         
         <Separator orientation="vertical" class="h-6 mx-2 hidden sm:block" />
@@ -104,9 +103,7 @@ const isOpen = ref(false)
                   </div>
                   <div class="flex items-center justify-between px-2">
                     <span class="text-sm font-medium">Configurações</span>
-                    <Button variant="ghost" size="icon">
-                      <Settings class="h-5 w-5" />
-                    </Button>
+                    <AccessibilitySettings />
                   </div>
                 </div>
               </div>

@@ -29,6 +29,11 @@ const router = createRouter({
       name: 'scene-explanation',
       component: () => import('../views/SceneExplanationView.vue'),
     },
+    {
+      path: '/streaming',
+      name: 'streaming',
+      component: () => import('../views/StreamingView.vue'),
+    },
   ],
 })
 
